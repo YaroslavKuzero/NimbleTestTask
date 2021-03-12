@@ -1,0 +1,25 @@
+.counter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  line-height: 50px;
+}
+
+.counterName {
+  flex-basis: 50%;
+  margin: 0;
+  padding: 0;
+}
+.counterTime {
+  flex-basis: 25%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-basis: 25%;
+  margin: 0 auto;
+}
