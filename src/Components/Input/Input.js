@@ -8,7 +8,6 @@ export default function TrackerNameInput() {
   const [name, setName] = useState('');
 
   const changeHandler = useCallback((event) => {
-    console.log(event);
     setName(event.currentTarget.value)
   }, [])
 

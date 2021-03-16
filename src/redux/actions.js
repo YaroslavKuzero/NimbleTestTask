@@ -11,12 +11,13 @@ const addCounter = createAction('counter/add', data => {
     payload: {
       id: nanoid(10),
       name: data,
-      time: moment('0').format("HH:mm:ss"),
+      time: 0,
     },
   }
 })
 
 const deleteCounter = createAction('counter/delete');
+const updateCounter = createAction('counter/update')
 
 
-export default { addCounter, deleteCounter }
+export default { addCounter, deleteCounter, updateCounter }
