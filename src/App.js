@@ -6,7 +6,7 @@ import styles from './App.module.css'
 function App() {
   return (
     <div className={styles.app}>
-      <h1>tracker</h1>
+      <h1 className={styles.header}>tracker</h1>
       <Input />
       <CounterList />
     </div>

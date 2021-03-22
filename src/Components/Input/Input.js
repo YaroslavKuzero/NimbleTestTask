@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
-import { useDispatch } from 'react-redux'
-import counterAction from '../../redux/actions';
+import { useDispatch } from 'react-redux';
+import { addCounter } from '../../redux/actions';
+import styles from './Input.module.css'
 
 
 export default function TrackerNameInput() {
@@ -13,15 +14,15 @@ export default function TrackerNameInput() {
 
   const addCounterHandler = useCallback((event) => {
     event.preventDefault();
-    dispatch(counterAction.addCounter(name));
+    dispatch(addCounter(name));
     setName('')
   }, [dispatch, name]);
 
   return (
-    <form onSubmit={addCounterHandler}>
-      <input type="text" placeholder="Enter tracker name" name='name' value={name}
+    <form className={styles.form} onSubmit={addCounterHandler}>
+      <input className={styles.input} type="text" placeholder="Enter tracker name" name='name' value={name}
         onChange={changeHandler}></input>
-      <button type="submit">Submit</button>
+      <button className={styles.button} type="submit">GO</button>
     </form>
   )
 }

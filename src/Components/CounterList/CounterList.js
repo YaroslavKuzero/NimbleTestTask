@@ -10,7 +10,7 @@ export default function CounterList() {
 
   return (
     <ul className={styles.counterList}>
-      {counters.map(item => (<li key={item.id}><Counter name={item.name} id={item.id} time={item.time} />
+      {counters.map(item => (<li key={item.id}><Counter item={item} />
       </li>))}
     </ul>
   )
